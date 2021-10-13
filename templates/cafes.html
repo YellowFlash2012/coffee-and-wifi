@@ -1,0 +1,96 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='css/styles.css')}}">
+{% endblock %}
+
+{% block title %}Restaurants{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>All Cafes</h1>
+
+	  <table class="table">
+          <!-- This is where you will write the code to render a Bootstrap 
+          Table that contains all the information from the 
+          cafe-data.csv file. -->
+
+          <table class="table">
+            <thead>
+              <tr>
+                
+                <th scope="col">{{cafes[0][0]}}</th>
+                <th scope="col">{{cafes[0][1]}}</th>
+                <th scope="col">{{cafes[0][2]}}</th>
+                <th scope="col">{{cafes[0][3]}}</th>
+                <th scope="col">{{cafes[0][4]}}</th>
+                <th scope="col">{{cafes[0][5]}}</th>
+                <th scope="col">{{cafes[0][6]}}</th>
+                
+                
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                
+                <td>{{cafes[1][0]}}</td>
+                <td><a href="{{cafes[1][1]}}">See on Google Maps</a></td>
+                <td>{{cafes[1][2]}}</td>
+                <td>{{cafes[1][3]}}</td>
+                <td>{{cafes[1][4]}}</td>
+                <td>{{cafes[1][5]}}</td>
+                <td>{{cafes[1][6]}}</td>
+                
+              </tr>
+              <tr>
+                
+                <td>{{cafes[2][0]}}</td>
+                <td><a href="{{cafes[2][1]}}">See on Google Maps</a></td>
+                <td>{{cafes[2][2]}}</td>
+                <td>{{cafes[2][3]}}</td>
+                <td>{{cafes[2][4]}}</td>
+                <td>{{cafes[2][5]}}</td>
+                <td>{{cafes[2][6]}}</td>
+                
+              </tr>
+              <tr>
+                
+                <td>{{cafes[3][0]}}</td>
+                <td><a href="{{cafes[3][1]}}">See on Google Maps</a></td>
+                <td>{{cafes[3][2]}}</td>
+                <td>{{cafes[3][3]}}</td>
+                <td>{{cafes[3][4]}}</td>
+                <td>{{cafes[3][5]}}</td>
+                <td>{{cafes[3][6]}}</td>
+                
+              </tr>
+              
+              <tr>
+                
+                <td>{{cafes[4][0]}}</td>
+                <td><a href="{{cafes[4][1]}}">See on Google Maps</a></td>
+                <td>{{cafes[4][2]}}</td>
+                <td>{{cafes[4][3]}}</td>
+                <td>{{cafes[4][4]}}</td>
+                <td>{{cafes[4][5]}}</td>
+                <td>{{cafes[4][6]}}</td>
+                
+              </tr>
+              
+            </tbody>
+          </table>
+  	  </table>
+
+      <p><a href="{{url_for('home')}}">Return to index page</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
